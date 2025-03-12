@@ -1,0 +1,19 @@
+.{
+    .name = .glfw_zig,
+    .version = "3.4.0",
+    .fingerprint = 0xcba456a5b3e6f23a,
+
+    .minimum_zig_version = "0.14.0",
+
+    .dependencies = .{
+        .glfw = .{
+            .url = "git+https://github.com/glfw/glfw.git#3.4",
+            .hash = "N-V-__8AAKE_TAAJO1RHyQ6MPZFPLLCAyHNu7iYXh7n1KEfH",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+    },
+}
