@@ -1,0 +1,25 @@
+name: compile
+permissions: 
+  contents: read
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: 0 0 * * 0
+jobs:
+  compile:
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest, windows-latest,	macos-latest]
+        zig-version: ["0.14.0", master]
+    name: "Compile for ${{ matrix.os }} with Zig ${{ matrix.zig-version }}"
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: mlugg/setup-zig@v1
+      with:
+        version: ${{ matrix.zig-version }}
+    - run: |
+        zig build -Dlinkage=static
+        zig build -Dlinkage=dynamic
