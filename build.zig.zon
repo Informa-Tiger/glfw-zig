@@ -1,7 +1,7 @@
 .{
-    .name = .glfw_zig,
+    .name = .glfw,
     .version = "3.4.0",
-    .fingerprint = 0xcba456a5b3e6f23a,
+    .fingerprint = 0x3bbe0a5cace47820,
 
     .minimum_zig_version = "0.14.0",
 
@@ -10,8 +10,62 @@
             .url = "git+https://github.com/glfw/glfw.git#3.4",
             .hash = "N-V-__8AAKE_TAAJO1RHyQ6MPZFPLLCAyHNu7iYXh7n1KEfH",
         },
+        .wayland_headers = .{
+            .url = "git+https://github.com/Batres3/wayland-headers.git#190b247ebc85546752dcf0255070fe835e2262b8",
+            .hash = "N-V-__8AALvXCgD7AaGEzoGpZFSnomVUd9osYPJN3P4jxxj9",
+            .lazy = true,
+        },
+        .xkbcommon = .{
+            .url = "git+https://github.com/xkbcommon/libxkbcommon.git#xkbcommon-1.8.1",
+            .hash = "N-V-__8AALWUVgCgUm0cC7S-oir8qQRxeye-5szD68eO0jFa",
+            .lazy = true,
+        },
+        .libX11 = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libX11-1.8.12.tar.xz",
+            .hash = "N-V-__8AAFcM-AB6B9oSilQIobWDb4W8NbzCit8Jn-686Uwi",
+            .lazy = true,
+        },
+        .xorgproto = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/proto/xorgproto-2024.1.tar.xz",
+            .hash = "N-V-__8AAJBbcQCJP91b8-T7BYBEwQNarvUXkrSsLo7z-9rl",
+            .lazy = true,
+        },
+        .libXcursor = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libXcursor-1.2.3.tar.xz",
+            .hash = "N-V-__8AAOO6HABBN3PY8ILc4Cu0j3n9pDY97d4Li8D8YVUM",
+            .lazy = true,
+        },
+        .libXrandr = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libXrandr-1.5.4.tar.xz",
+            .hash = "N-V-__8AAIA7HADeakb-9QCcHyXssuAmjOZKN7vZQK52JhOU",
+            .lazy = true,
+        },
+        .libXrender = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libXrender-0.9.12.tar.xz",
+            .hash = "N-V-__8AAHw9HgBticM-SMgcwIqbYguUzkdRnq6now53nmDf",
+            .lazy = true,
+        },
+        .libXinerama = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libXinerama-1.1.5.tar.xz",
+            .hash = "N-V-__8AAI0LGgCdNCQ6rGwiaiAlUjrvrqZrEekQx2FzonPJ",
+            .lazy = true,
+        },
+        .libXi = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libXi-1.8.2.tar.xz",
+            .hash = "N-V-__8AAJ9HLgA_JPs_oW57wbItPYPqqsZycB4n6kvoqEY1",
+            .lazy = true,
+        },
+        .libXext = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libXext-1.3.6.tar.xz",
+            .hash = "N-V-__8AAO45IwCuuMK54xADfiBcxyQPt4yfQQWOxN5rsTvH",
+            .lazy = true,
+        },
+        .libXfixes = .{
+            .url = "https://xorg.freedesktop.org/releases/individual/lib/libXfixes-6.0.1.tar.xz",
+            .hash = "N-V-__8AAHiaGgAXe8dlADjfqy33PmMs4IDTv7-iW6mc91lv",
+            .lazy = true,
+        },
     },
-
     .paths = .{
         "build.zig",
         "build.zig.zon",
