@@ -100,7 +100,7 @@ pub fn build(b: *std.Build) !void {
                 .{ .GLFW_VERSION_MAJOR = 3, .GLFW_VERSION_MINOR = 4, .GLFW_VERSION_PATCH = 0, .GLFW_VERSION = "3.4.0" },
             );
 
-            mod.addWin32ResourceFile(.{ .file = b.addWriteFiles().addCopyFile(resource_file.getOutput(), "glfw.rc") });
+            mod.addWin32ResourceFile(.{ .file = b.addWriteFiles().addCopyFile(resource_file.getOutputFile(), "glfw.rc") });
         }
     }
 
